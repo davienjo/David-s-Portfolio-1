@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="media-queries.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>David's Portfolio</title>
+  </head>
+  <body>
+    <div class="wrapper">
+    <header>
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+
+    <div class="container">
+
+      <!-- Logo -->
+      <a class="navbar-brand" href="index.html">
+        <img src="images/david-logo.png" alt="Logo" height="40">
+      </a>
+
+      <!-- Hamburger / Menu icon -->
+      <button class="navbar-toggler border-0" type="button" 
+              data-bs-toggle="collapse" data-bs-target="#mainNav"
+              aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+       
+        <span class="navbar-toggler-icon"></span>
+      
+      </button>
+
+      <!-- Collapsible links -->
+      <div class="collapse navbar-collapse justify-content-end" id="mainNav">
+        <ul class="navbar-nav mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+
+        <!-- Contact button -->
+        <a href="#contact" class="btn-nav btn-primary ms-lg-3">Contact Me</a>
+      </div>
+
+    </div>
+  </nav>
+</header>
+
+
+      <!-- ----------HERO SECTION -->
+
+      <section class="hero" id="home">
+        <div class="hero-text">
+          <h1 class="hero-h1">
+            Hello There! I'm
+            <span class="highlight highlight-primary">David Thairu</span>
+          </h1>
+          <h2>
+            <span class="hero-title"
+              >Frontend Web Developer & Web Designer.</span
+            >
+          </h2>
+          <p>
+            I create modern, responsive, and user-friendly websites that bring
+            ideas to life.<br />
+            From sleek designs to clean code.
+          </p>
+        </div>
+
+        <div class="hero-btn">
+          <a class="btn btn-primary" href="#projects">View my work</a>
+          <a class="btn btn-tertiary" href="#contact">Hire me</a>
+        </div>
+      </section>
+
+      <br />
+
+      <!-- SERVICES SECTION -->
+      <section class="services" id="services">
+        <h2><span class="span-text">Services</span> I Provide</h2>
+
+        <div class="services-container">
+          <div class="service-card">
+            <img src="images/web-development.png" alt="web development" />
+            <h3>Web Development</h3>
+            <p>
+              I build responsive and high-performance websites using the latest
+              web technologies to ensure optimal user experience across all
+              devices.
+            </p>
+          </div>
+          <div class="service-card">
+            <img src="images/web-design.svg" alt="web design" />
+            <h3>Web Design</h3>
+            <p>
+              I create visually appealing and user-friendly website designs that
+              align with your brand identity and captivate your audience.
+            </p>
+          </div>
+          <div class="service-card">
+            <img src="images/undraw_search-engines_k649.svg" alt="seo" />
+            <h3>SEO Optimization</h3>
+            <p>
+              I optimize websites for search engines to improve visibility,
+              increase organic traffic, and enhance overall online presence.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT ME SECTION -->
+      <section class="about" id="about">
+        <h2>About Me</h2>
+        <div class="about-container">
+          <div class="about-image">
+            <img src="images/Screenshot 2025-09-13 214512.png" alt="about me" />
+          </div>
+
+          <div class="about-text">
+            <h3>Who is <span class="span-text">David Thairu</span></h3>
+            <p>
+              I'm David Thairu, a passionate Frontend Web Developer and Web
+              Designer dedicated to crafting beautiful and functional websites.
+              With a keen eye for design and a strong foundation in web
+              technologies, I strive to create digital experiences that not only
+              look great but also perform seamlessly across all devices.
+            </p>
+          </div>
+        </div>
+        <a class="btn btn-primary" href="#contact">Get In Touch</a>
+      </section>
+
+      <!-- PROJECTS SECTION -->
+      <section class="projects" id="projects">
+        <div class="section-header">
+          <h2>My <span class="span-text">Projects</span></h2>
+        </div>
+
+        <div class="project-container">
+          <div class="project-card">
+            <img src="images/tasty-bites.png" alt="project 1" />
+            <h3>Project One</h3>
+            <p>
+              A clean, responsive restaurant website built with HTML, CSS, and
+              JavaScript.
+            </p>
+            <a
+              class="btn btn-primary"
+              href=" https://davienjo.github.io/restaurant/"
+              target="_blank"
+              >View Project</a
+            >
+          </div>
+          <div class="project-card">
+            <img src="images/webnet-movies.png" alt="project 2" />
+            <h3>Project Two</h3>
+            <p>
+              A sleek, responsive movie site inspired by Netflix, built with
+              HTML, and CSS.
+            </p>
+            <a
+              class="btn btn-primary"
+              href="https://davienjo.github.io/Webnet-Movies/"
+              target="_blank"
+              >View Project</a
+            >
+          </div>
+          <div class="project-card">
+            <img src="images/smart-barber.png" alt="project 3" />
+            <h3>Project Three</h3>
+            <p>
+              A stylish, mobile-friendly barbershop website built with HTML, and
+              CSS.
+            </p>
+            <a
+              class="btn btn-primary"
+              href=" https://davienjo.github.io/smart-barber-2/"
+              >View Project</a
+            >
+          </div>
+          <div class="project-card">
+            <img
+              src="images/explore-the -world-screen-shot.png"
+              alt="project 3"
+            />
+            <h3>Project Four</h3>
+            <p>
+              A responsive travel website built with HTML and CSS, showcasing
+              destinations and adventures.
+            </p>
+            <a
+              class="btn btn-primary"
+              href="https://davienjo.github.io/Explore-the-world/"
+              target="_blank"
+              >View Project</a
+            >
+          </div>
+          <div class="project-card">
+            <img src="images/Quantum-tech-university.png" alt="project 3" />
+            <h3>Project Five</h3>
+            <p>
+              A responsive university website built with HTML and CSS, featuring
+              key campus information and programs
+            </p>
+            <a
+              class="btn btn-primary"
+              href="https://davienjo.github.io/University-Website/"
+              target="_blank"
+              >View Project</a
+            >
+          </div>
+          <div class="project-card">
+            <img src="images/landing-page.png" alt="project 3" />
+            <h3>Project Six</h3>
+            <p>
+              A clean, responsive landing page built with HTML and CSS to
+              highlight a service.
+            </p>
+            <a
+              class="btn btn-primary"
+              href="https://davienjo.github.io/Website-landing-page/"
+              target="_blank"
+              >View Project</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- EDUCATION BACKGROUND -->
+      <section class="education" id="education">
+        <h2>My <span class="span-text">Education</span></h2>
+        <div class="education-container">
+          <div class="education-card">
+            <h3>Bachelor of Business Information Technology</h3>
+            <h4>University of Nairobi</h4>
+            <p>Graduated: 2020</p>
+            <p>
+              Relevant Coursework: Web Development, Database Management,
+              Software Engineering, Data Structures, and Algorithms.
+            </p>
+          </div>
+          <div class="education-card">
+            <h3>Full-Stack Web Development Bootcamp</h3>
+            <h4>Udemy</h4>
+            <p>Completed: 2024</p>
+            <p>
+              Skills Acquired: HTML, CSS, JavaScript, React, Node.js, Express,
+              MongoDB, and RESTful API development.
+            </p>
+          </div>
+          <div class="education-card">
+            <h3>Certified Frontend Developer</h3>
+            <h4>freeCodeCamp</h4>
+            <p>Completed: 2024</p>
+            <p>
+              Skills Acquired: Responsive Web Design, JavaScript Algorithms and
+              Data Structures, Front End Libraries.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT SECTION -->
+      <section class="contact" id="contact">
+        <div class="contact-info">
+          <div class="contact-text">
+            <h2>Contact me</h2>
+            <h3>Let’s talk about your next projects</h3>
+            <p>
+              If you're interested in working together or have any <br />
+              questions, feel free to reach out!
+            </p>
+          </div>
+
+          <div class="center">
+            <img
+              src="images/call-outline.svg"
+              alt="Phone"
+              class="contact-icon"
+            />
+            <p>+254720062553</p>
+          </div>
+
+          <div class="center">
+            <img
+              src="images/mail-outline.svg"
+              alt="Email"
+              class="contact-icon"
+            />
+            <p>thaividz2@gmail.com</p>
+          </div>
+
+          <div class="center">
+            <img
+              src="images/location-outline.svg"
+              alt="Location"
+              class="contact-icon"
+            />
+            <p>Nairobi, Kenya</p>
+          </div>
+        </div>
+
+        <form>
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <textarea rows="5" placeholder="Your Message" required></textarea>
+          <a class="btn btn-primary" href="">Send Message</a>
+        </form>
+      </section>
+
+      <footer>
+        <!-- social media links -->
+        <div class="social-links">
+          <a href="https://www.facebook.com/davidthairu"
+            ><img src="images/logo-facebook.svg" alt="facebook"
+          /></a>
+          <a href="https://www.twitter.com/davidthairu"
+            ><img src="images/logo-twitter.svg" alt="twitter"
+          /></a>
+          <a href="https://www.linkedin.com/in/davidthairu"
+            ><img src="images/logo-linkedin.svg" alt="linkedin"
+          /></a>
+          <a href="https://www.instagram.com/davidthairu"
+            ><img src="images/logo-instagram.svg" alt="instagram"
+          /></a>
+        </div>
+
+        <p>&copy; 2025 David Thairu. All rights reserved.</p>
+      </footer>
+
+      <script src="app.js"></script>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  </body>
+</html>
