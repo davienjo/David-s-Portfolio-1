@@ -2,28 +2,31 @@
    TABLETS (max-width: 768px)
    ====================== */
 
- 
-@media (max-width: 768px) {
+@media (max-width: 49rem) {
+  html {
+    font-size: 70%;
+  }
+  .wrapper {
+    max-width: 100%;
+  }
+
   .navbar-nav {
-    justify-content: center;   
-    text-align: center;        
+    justify-content: center;
+    text-align: center;
   }
 
   .navbar-nav .nav-item {
-    margin: 0.5rem 0;          
+    margin: 0.5rem 0;
   }
 
- 
   .btn-nav {
-    display: none;          
+    display: none;
     padding: 0.5rem;
     border-radius: 20px;
     font-weight: 700;
     margin: 0 auto;
     text-align: center;
   }
-
- 
 
   /* HERO SECTION */
   .hero-h1 {
@@ -36,6 +39,11 @@
 
   .hero-btn {
     flex-direction: column;
+    gap: 2rem;
+  }
+
+  .services-container {
+    grid-template-columns: 1fr;
   }
 
   /* ABOUT SECTION */
@@ -47,20 +55,28 @@
   .about-text {
     max-width: 100%;
   }
+  .about p:last-child {
+    margin-bottom: 3rem;
+  }
 
   /* PROJECTS SECTION */
   .project-container {
-    gap: 1.5rem;
-    padding: 0 1rem;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+    max-width: 100%;
+    padding: 0;
   }
-
+  .project-card {
+    max-width: 100%;
+    padding: 1rem;
+  }
   /* CONTACT SECTION */
   .contact {
     flex-direction: column;
     align-items: center;
     text-align: center;
     gap: 1rem;
-    padding: 2rem;
+    padding: 2rem 1rem;
   }
 
   .contact-text {
@@ -89,14 +105,16 @@
   .contact-info h2 {
     font-size: 1.8rem;
   }
-
 }
 /* ======================
    MOBILE (max-width: 576px)
    ====================== */
-@media (max-width: 576px) {
-  body {
-    font-size: 0.9rem;
+@media (max-width: 36rem) {
+  html {
+    font-size: 60%;
+  }
+  .wrapper {
+    max-width: 100%;
   }
 
   .hero-h1 {
@@ -106,6 +124,9 @@
   .hero p {
     font-size: 0.95rem;
     padding: 0 1rem;
+  }
+  .hero-btn {
+    gap: 2rem;
   }
 
   .services h2,
@@ -122,14 +143,18 @@
     font-size: 1.2rem;
   }
 
-  .wrapper {
-    width: 100%;
-    padding: 0 1rem;
+  .services-container,
+  .education-container,
+  .project-container {
+    grid-template-columns: 1fr;
   }
 
-  .services-container,
-  .education-container {
-    grid-template-columns: 1fr;
+  .project-card {
+    max-width: 100%;
+  }
+
+  .education-card {
+    max-width: 100%;
   }
 
   .about-image img {
@@ -137,12 +162,7 @@
     width: 100%;
   }
 
-  .hero-btn {
-    gap: 0.5rem;
-  }
-
   .contact {
-    padding: 2rem 1rem;
     gap: 1.5rem;
   }
 
