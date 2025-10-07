@@ -14,20 +14,6 @@
   paragraphs.forEach(p => observer.observe(p));
 
 
-// Select the hamburger menu and nav links
-// const menuBtn = document.querySelector(".menu-btn");
-// const navLinks = document.querySelector(".nav-links");
-
-// // Toggle 'active' class on click
-// menuBtn.addEventListener("click", () => {
-//   navLinks.classList.toggle("active");
-// });
-
-// document.querySelectorAll(".nav-links a").forEach(link => {
-//   link.addEventListener("click", () => {
-//     navLinks.classList.remove("active");
-//   });
-// });
 
 
 // animations using GSAP
@@ -36,11 +22,15 @@ document.addEventListener("DOMContentLoaded", () => {
   gsap.registerPlugin(ScrollTrigger);
 
   // HERO SECTION
-  const tl = gsap.timeline();
-  tl.from(".hero-h1", { y: -50, opacity: 0, duration: 4, ease: "power3.out" })
-    .from(".hero h2", { y: 40, opacity: 0, duration: 3, ease: "power2.out" }, "-=1")
-    .from(".hero p", { y: 30, opacity: 0, duration: 3, ease: "power1.out" }, "-=0.8")
-    .from(".hero-btn", { y: 20, opacity: 0, duration: 2, ease: "power1.out" }, "-=0.6");
+  const tl = gsap.timeline({ defaults: { ease: "linear", duration:1} });
+  tl.fromTo(".hero-img img", { y: -1000}, {opacity: 1, y:0 });
+  tl.fromTo(".hero-text-section", { x: 1000, opacity: 0,}, { x: 0, opacity: 1 });
+
+
+  // ABOUT SECTION
+  
+  // tl.fromTo(".about-text", { x: 1000, opacity: 0,}, { x: 0, opacity: 1 });
+
 
   // GENERAL SECTION FADE-IN
   gsap.utils.toArray("section").forEach(section => {
@@ -58,52 +48,34 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // SERVICE CARDS
+  // SERVICE CARDS---------------------------------------To revisit LATER for better understanding
   
-const totalCards = document.querySelectorAll(".service-card").length;
+// select the container and cards
+const container = document.querySelector(".services-container");
+const cards = gsap.utils.toArray(".service-card");
 
-gsap.to(".services-container", {
-  xPercent: -100,
-  repeat: -1,
-  duration: 20,
-  ease: "none",
-  modifiers: {
-    xPercent: gsap.utils.wrap(-100, 0),
-  },
+// duplicate your 6 cards once (so total 12)
+cards.forEach((card) => {
+  container.appendChild(card.cloneNode(true));
 });
 
-  
+// make it scroll infinitely and seamlessly
+const scroll = gsap.to(container, {
+  xPercent: -50,  // moves halfway (since we doubled)
+  ease: "none",
+  duration: 20,   // adjust for speed (higher = slower)
+  repeat: -1,
+  modifiers: {
+  xPercent: gsap.utils.wrap(-50, 0) // wraps perfectly
+  }
+});
 
-  // ABOUT SECTION
-  if (window.innerWidth > 768) {
-  gsap.from(".about-image img", {
-    scrollTrigger: {
-      trigger: ".about",
-      start: "center 80%",
-      end: "bottom 80%",
-      scrub: true,
-    },
-    opacity: 0,
-    x: -150,
-    duration: 1.2,
-    ease: "power2.out",
-  });
+// optional: pause on hover
+container.addEventListener("mouseenter", () => scroll.pause());
+container.addEventListener("mouseleave", () => scroll.play());
 
-  gsap.from(".about-text", {
-    scrollTrigger: {
-      trigger: ".about",
-      start: "center 80%",
-      end: "bottom 80%",
-      scrub: true,
-    },
-    opacity: 0,
-    x: 150,
-    duration: 1.2,
-    ease: "power2.out",
-  });
-}
 
-  // PROJECTS
+ // PROJECTS
   gsap.utils.toArray(".project-card").forEach((card, i) => {
     gsap.from(card, {
       scrollTrigger: {

@@ -1,3 +1,24 @@
+
+@media(max-width: 69.375rem) {
+  html{
+    font-size: 75%;
+  }
+
+   .hero-img{
+    max-width: 350px;
+  }
+
+  .hero-img img{
+   width: 100%;
+   height: auto;
+ }
+}
+
+
+
+
+
+
 /* ======================
    TABLETS (max-width: 768px)
    ====================== */
@@ -6,29 +27,21 @@
   html {
     font-size: 70%;
   }
-  .wrapper {
-    max-width: 100%;
-  }
-
-  .navbar-nav {
-    justify-content: center;
-    text-align: center;
-  }
-
-  .navbar-nav .nav-item {
-    margin: 0.5rem 0;
-  }
-
-  .btn-nav {
-    display: none;
-    padding: 0.5rem;
-    border-radius: 20px;
-    font-weight: 700;
-    margin: 0 auto;
-    text-align: center;
-  }
+ body{
+  padding-top:5rem;
+ }
 
   /* HERO SECTION */
+.hero{
+  height: auto;
+  padding: 4rem 1rem;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+}
+
+
   .hero-h1 {
     font-size: 2.2rem;
   }
@@ -50,6 +63,7 @@
   .about-container {
     flex-direction: column;
     text-align: center;
+    max-width: ;
   }
 
   .about-text {
