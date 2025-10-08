@@ -1,5 +1,14 @@
 
-  const paragraphs = document.querySelectorAll('.about p');
+  
+  const menuToggle = document.getElementById("menu-toggle");
+  const navLinks = document.querySelector(".nav-links");
+
+  menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
+
+
+const paragraphs = document.querySelectorAll('.about p');
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
