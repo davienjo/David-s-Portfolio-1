@@ -1,90 +1,113 @@
+// 1️⃣ Register GSAP + ScrollTrigger
+gsap.registerPlugin(ScrollTrigger);
 
-  
-  const menuToggle = document.getElementById("menu-toggle");
-  const navLinks = document.querySelector(".nav-links");
+// 2️⃣ Initialize Lenis
+const lenis = new Lenis({
+  smooth: true,
+  lerp: 0.1,
+});
 
-  menuToggle.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
-  });
+// 3️⃣ Run Lenis each frame
+function raf(time) {
+  lenis.raf(time);
+  ScrollTrigger.update(); // ensure GSAP syncs
+  requestAnimationFrame(raf);
+}
+requestAnimationFrame(raf);
+
+// 4️⃣ Sync Lenis with ScrollTrigger
+ScrollTrigger.scrollerProxy(document.body, {
+  scrollTop(value) {
+    if (arguments.length) lenis.scrollTo(value);
+    return window.scrollY;
+  },
+  getBoundingClientRect() {
+    return { top: 0, left: 0, width: window.innerWidth, height: window.innerHeight };
+  }
+});
 
 
-const paragraphs = document.querySelectorAll('.about p');
+// ==============================
+// 3️⃣ NAV MENU TOGGLE
+// ==============================
+const menuToggle = document.getElementById("menu-toggle");
+const navLinks = document.querySelector(".nav-links");
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('active');
-      } else {
-        entry.target.classList.remove('active');
-      }
-    });
-  }, { threshold: 0.6 }); // 60% visible
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
 
-  paragraphs.forEach(p => observer.observe(p));
-
-
-
-
-// animations using GSAP
+// ==============================
+// 4️⃣ DOM LOADED: ANIMATIONS
+// ==============================
 document.addEventListener("DOMContentLoaded", () => {
+  // HERO SECTION ANIMATION
+  const tl = gsap.timeline({ defaults: { ease: "linear", duration: 1 } });
+  tl.fromTo(".hero-img img", { y: -1000 }, { opacity: 1, y: 0, duration: 1.6 });
+  tl.fromTo(
+    ".hero-text-section",
+    { x: 1000, opacity: 0 },
+    { x: 0, opacity: 1, duration: 1.8 },
+    "-=1.2"
+  );
 
-  gsap.registerPlugin(ScrollTrigger);
+  // HERO WAVE TEXT
+  const waveText = document.querySelector(".hero-h1");
+  if (waveText) {
+    const chars = waveText.textContent.split("");
+    waveText.textContent = "";
 
-  // HERO SECTION
-  const tl = gsap.timeline({ defaults: { ease: "linear", duration:1} });
-  tl.fromTo(".hero-img img", { y: -1000}, {opacity: 1, y:0 });
-  tl.fromTo(".hero-text-section", { x: 1000, opacity: 0,}, { x: 0, opacity: 1 });
+    chars.forEach((char) => {
+      const span = document.createElement("span");
+      span.textContent = char;
+      waveText.appendChild(span);
+    });
 
+    gsap.to(".hero-h1 span", {
+      y: -30,
+      ease: "elastic.out(1, 0.5)",
+      duration: 1,
+      stagger: { each: 0.02, repeat: 5, yoyo: true },
+      color: "var(--light-color)",
+    });
+  }
 
-  // ABOUT SECTION
-  
-  // tl.fromTo(".about-text", { x: 1000, opacity: 0,}, { x: 0, opacity: 1 });
-
-
-  // GENERAL SECTION FADE-IN
-  gsap.utils.toArray("section").forEach(section => {
-    gsap.from(section, {
+  // ABOUT SECTION - SplitType ANIMATION
+  const splitTypes = document.querySelectorAll(".reveal-line");
+  splitTypes.forEach((element) => {
+    const text = new SplitType(element, { types: "words" });
+    gsap.from(text.words, {
       scrollTrigger: {
-        trigger: section,
+        trigger: element,
         start: "top 80%",
-        end: "top 60%",
-        scrub: true,
+        end: "top 20%",
+        scrub: false,
+        toggleActions: "play none none reverse",
       },
-      opacity: 0,
-      y: 80,
-      duration: 1.4,
+      opacity: 0.2,
+      duration: 2.5,
+      // y:10,
+      stagger: 0.1,
       ease: "power2.out",
     });
   });
 
-  // SERVICE CARDS---------------------------------------To revisit LATER for better understanding
-  
-// select the container and cards
-const container = document.querySelector(".services-container");
-const cards = gsap.utils.toArray(".service-card");
+  // SERVICES - INFINITE SCROLL
+  const servicesContainer = document.getElementById("services-container");
+  const leftArrow = document.querySelector(".left-arrow");
+  const rightArrow = document.querySelector(".right-arrow");
 
-// duplicate your 6 cards once (so total 12)
-cards.forEach((card) => {
-  container.appendChild(card.cloneNode(true));
-});
-
-// make it scroll infinitely and seamlessly
-const scroll = gsap.to(container, {
-  xPercent: -50,  // moves halfway (since we doubled)
-  ease: "none",
-  duration: 20,   // adjust for speed (higher = slower)
-  repeat: -1,
-  modifiers: {
-  xPercent: gsap.utils.wrap(-50, 0) // wraps perfectly
+  if (servicesContainer && leftArrow && rightArrow) {
+    const scrollAmount = 300;
+    leftArrow.addEventListener("click", () => {
+      servicesContainer.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+    });
+    rightArrow.addEventListener("click", () => {
+      servicesContainer.scrollBy({ left: scrollAmount, behavior: "smooth" });
+    });
   }
-});
 
-// optional: pause on hover
-container.addEventListener("mouseenter", () => scroll.pause());
-container.addEventListener("mouseleave", () => scroll.play());
-
-
- // PROJECTS
+  // PROJECTS
   gsap.utils.toArray(".project-card").forEach((card, i) => {
     gsap.from(card, {
       scrollTrigger: {
@@ -115,4 +138,11 @@ container.addEventListener("mouseleave", () => scroll.play());
     duration: 1.2,
     ease: "power2.out",
   });
+});
+
+// ==============================
+// 5️⃣ REFRESH SCROLLTRIGGER AFTER LOAD
+// ==============================
+window.addEventListener("load", () => {
+  ScrollTrigger.refresh();
 });

@@ -44,7 +44,7 @@
     <section class="hero" id="home">
 
       <div class="hero-img">
-        <img src="images/david-image.jpg" alt="Hero Image" />
+      <img src="images/david-image.jpg" alt="Hero Image" />
       <div class="blob">Hey there 👋<br> I build awesome websites!</div>
       </div>
       
@@ -52,17 +52,17 @@
 
        <div class="hero-text">
         <h1 class="hero-h1">
-          Hello There!, I'm
-          <span class="highlight highlight-primary">David.</span>
+          I'm David.
+         
         </h1>
-        <h2>
-          <span class="hero-title">Frontend Web Developer & Web Designer.</span>
+        <h2 >
+          <span class="hero-title reveal-line">Frontend Web Developer & Web Designer.</span>
         </h2>
-        <p>
+        <!-- <p class=">
           I create modern, responsive, and user-friendly websites that bring
-          ideas to life. <br />
+          ideas to life. <br>
           From sleek designs to clean code.
-        </p>
+        </p> -->
       </div>
 
       <div class="hero-btn">
@@ -70,7 +70,12 @@
         <a class="btn btn-tertiary" href="#contact">Hire me</a>
       </div>
       <div>
- </section>
+
+</section>
+ <div class="motion-text">
+            <span>Frontend Developer ✦ Web Designer ✦ Creative Coder ✦ UI Enthusiast ✦</span>
+            <span>Frontend Developer ✦ Web Designer ✦ Creative Coder ✦ UI Enthusiast ✦</span>
+          </div>
 
     
 
@@ -78,7 +83,13 @@
     <section class="services" id="services">
       <h2><span class="span-text">Services</span> I Provide</h2>
 
-      <div class="services-container">
+
+      <div class="services-wrapper">
+        <button class ="arrow left-arrow">&#10094;</button>
+
+
+
+      <div class="services-container"id="services-container">
         <div class="service-card">
           <img
             src="images/programming-background-collage.jpg"
@@ -115,7 +126,11 @@
             alt="web design"
           />
           <h3>Branding and content guidance</h3>
+
         </div>
+         
+      </div>
+      <button class ="arrow right-arrow">&#10095;</button>
       </div>
     </section>
 
@@ -128,14 +143,14 @@
         </div>
 
         <div class="about-text">
-          <h3>Who is <span class="span-text">David Thairu</span></h3>
-          <p>
-            I'm David Thairu, a passionate Frontend Web Developer and Web
-            Designer dedicated to crafting beautiful and functional websites.
-            With a keen eye for design and a strong foundation in web
-            technologies, I strive to create digital experiences that not only
-            look great but also perform seamlessly across all devices.
-          </p>
+          <h3>Who is <span class="span-text">David?</span></h3>
+            <p class="reveal-line">I'm a <span class="accent">passionate web developer</span><br> with a love for
+      creating <span class="accent2">clean, modern, and interactive</span> designs.<br>
+      I enjoy turning ideas into real projects using<br>
+      <span class="accent3">HTML, CSS, JavaScript,</span> and PHP.<br>
+      Every line of code I write aims to create a<br>
+      <span class="accent">smooth and memorable experience</span> for users.</p>
+        
         </div>
       </div>
       <a class="btn btn-primary" href="#contact">Get In Touch</a>
@@ -420,8 +435,17 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+
+    <!-- GSAP ScrollTrigger -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
 
-    <script src="app.js"></script>
-  </body>
+    <!-- SplitType (text animation) -->
+    <script src="https://unpkg.com/split-type"></script>
+
+    <!-- Lenis (smooth scroll) -->
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.24/bundled/lenis.min.js"></script>
+
+    <!-- Your custom animation script -->
+    <script src="app.js" defer></script>
+</body>
 </html>
