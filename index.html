@@ -2,6 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -10,11 +12,13 @@
       rel="stylesheet"
     />
 
-  <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="orb.css" />
     <link rel="stylesheet" href="media-queries.css" />
     <title>David's Portfolio</title>
   </head>
   <body>
+    <div class="floating-orb"></div>
     <header>
       <nav>
         <div class="nav-container">
@@ -22,7 +26,7 @@
             <img src="images/david-logo.png" alt="Logo" height="40" />
           </div>
           <ul class="nav-links">
-            <li><a href="#index.html">Home</a></li>
+            <li><a href="#home.html">Home</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contacts</a></li>
@@ -41,96 +45,84 @@
 
     <!-- ----------HERO SECTION -->
 
+    <!-- HERO SECTION -->
     <section class="hero" id="home">
+      <div class="hero-content">
+        <div class="hero-image">
+          <img src="images/david-image.jpg" alt="David Thairu" />
+          <div class="blob">Hey there 👋<br />I build awesome websites!</div>
+        </div>
 
-      <div class="hero-img">
-      <img src="images/david-image.jpg" alt="Hero Image" />
-      <div class="blob">Hey there 👋<br> I build awesome websites!</div>
-      </div>
-      
-      <div class="hero-text-section">
+        <div class="hero-text">
+          <h1>I'm <span class="highlight">David</span></h1>
+          <h2>Frontend Developer & Web Designer</h2>
 
-       <div class="hero-text">
-        <h1 class="hero-h1">
-          I'm David.
-         
-        </h1>
-        <h2 >
-          <span class="hero-title reveal-line">Frontend Web Developer & Web Designer.</span>
-        </h2>
-        <!-- <p class=">
-          I create modern, responsive, and user-friendly websites that bring
-          ideas to life. <br>
-          From sleek designs to clean code.
-        </p> -->
-      </div>
-
-      <div class="hero-btn">
-        <a class="btn btn-primary" href="#projects">View my work</a>
-        <a class="btn btn-tertiary" href="#contact">Hire me</a>
-      </div>
-      <div>
-
-</section>
- <div class="motion-text">
-            <span>Frontend Developer ✦ Web Designer ✦ Creative Coder ✦ UI Enthusiast ✦</span>
-            <span>Frontend Developer ✦ Web Designer ✦ Creative Coder ✦ UI Enthusiast ✦</span>
+          <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary">View my work</a>
+            <a href="#contact" class="btn btn-tertiary">Hire me</a>
           </div>
+        </div>
+      </div>
 
-    
+      <div class="motion-text">
+        <span
+          >Frontend Developer ✦ Web Designer ✦ Creative Coder ✦ UI Enthusiast
+          ✦</span
+        >
+        <span
+          >Frontend Developer ✦ Web Designer ✦ Creative Coder ✦ UI Enthusiast
+          ✦</span
+        >
+      </div>
+    </section>
 
     <!-- SERVICES SECTION -->
     <section class="services" id="services">
       <h2><span class="span-text">Services</span> I Provide</h2>
 
-
       <div class="services-wrapper">
-        <button class ="arrow left-arrow">&#10094;</button>
+        <button class="arrow left-arrow">&#10094;</button>
 
+        <div class="services-container" id="services-container">
+          <div class="service-card">
+            <img
+              src="images/programming-background-collage.jpg"
+              alt="web development"
+            />
+            <h3>Web Development</h3>
+          </div>
+          <div class="service-card">
+            <img src="images/webdesign.png" alt="web design" />
+            <h3>Web Design</h3>
+          </div>
+          <div class="service-card">
+            <img src="images/SEO.png" alt="seo" />
+            <h3>SEO Optimization</h3>
+          </div>
 
-
-      <div class="services-container"id="services-container">
-        <div class="service-card">
-          <img
-            src="images/programming-background-collage.jpg"
-            alt="web development"
-          />
-          <h3>Web Development</h3>
+          <div class="service-card">
+            <img
+              src="images/3d-cartoon-lumberjack-character.jpg"
+              alt="web design"
+            />
+            <h3>Animation & Interactivity</h3>
+          </div>
+          <div class="service-card">
+            <img
+              src="images/representations-user-experience-interface-design.jpg"
+              alt="web design"
+            />
+            <h3>User Interface (UI) Design</h3>
+          </div>
+          <div class="service-card">
+            <img
+              src="images/media-marketing-internet-digital-global.jpg"
+              alt="web design"
+            />
+            <h3>Branding and content guidance</h3>
+          </div>
         </div>
-        <div class="service-card">
-          <img src="images/webdesign.png" alt="web design" />
-          <h3>Web Design</h3>
-        </div>
-        <div class="service-card">
-          <img src="images/SEO.png" alt="seo" />
-          <h3>SEO Optimization</h3>
-        </div>
-
-        <div class="service-card">
-          <img
-            src="images/3d-cartoon-lumberjack-character.jpg"
-            alt="web design"
-          />
-          <h3>Animation & Interactivity</h3>
-        </div>
-        <div class="service-card">
-          <img
-            src="images/representations-user-experience-interface-design.jpg"
-            alt="web design"
-          />
-          <h3>User Interface (UI) Design</h3>
-        </div>
-        <div class="service-card">
-          <img
-            src="images/media-marketing-internet-digital-global.jpg"
-            alt="web design"
-          />
-          <h3>Branding and content guidance</h3>
-
-        </div>
-         
-      </div>
-      <button class ="arrow right-arrow">&#10095;</button>
+        <button class="arrow right-arrow">&#10095;</button>
       </div>
     </section>
 
@@ -144,13 +136,17 @@
 
         <div class="about-text">
           <h3>Who is <span class="span-text">David?</span></h3>
-            <p class="reveal-line">I'm a <span class="accent">passionate web developer</span><br> with a love for
-      creating <span class="accent2">clean, modern, and interactive</span> designs.<br>
-      I enjoy turning ideas into real projects using<br>
-      <span class="accent3">HTML, CSS, JavaScript,</span> and PHP.<br>
-      Every line of code I write aims to create a<br>
-      <span class="accent">smooth and memorable experience</span> for users.</p>
-        
+          <p class="reveal-line">
+            I'm a <span class="accent">passionate web developer</span><br />
+            with a love for creating
+            <span class="accent2">clean, modern, and interactive</span>
+            designs.<br />
+            I enjoy turning ideas into real projects using<br />
+            <span class="accent3">HTML, CSS, JavaScript,</span> and PHP.<br />
+            Every line of code I write aims to create a<br />
+            <span class="accent">smooth and memorable experience</span> for
+            users.
+          </p>
         </div>
       </div>
       <a class="btn btn-primary" href="#contact">Get In Touch</a>
@@ -162,119 +158,96 @@
         <h2>My <span class="span-text">Projects</span></h2>
       </div>
 
-      <div class="project-container">
+      <div class="floating-projects">
+        <!-- Visible Projects -->
         <div class="project-card">
-          <img
-            class="project-image"
-            src="images/tasty-bites-left.png"
-            alt="project 1"
-          />
-          <h3>Project One</h3>
-          <p>
-            A clean, responsive restaurant website built with HTML, CSS, and
-            JavaScript.
-          </p>
-          <a
-            class="btn btn-primary"
-            href=" https://davienjo.github.io/restaurant/"
-            target="_blank"
-            >View Project</a
-          >
+          <img src="images/tasty-bites-left.png" alt="Tasty Bites Website" />
+          <div class="overlay">
+            <h3>Tasty Bites</h3>
+            <p>Responsive restaurant website</p>
+            <a href="https://davienjo.github.io/restaurant/" target="_blank"
+              >View Project</a
+            >
+          </div>
         </div>
+
         <div class="project-card">
-          <img
-            class="project-image"
-            src="images/webnet-movies-side.png"
-            alt="project 2"
-          />
-          <h3>Project Two</h3>
-          <p>
-            A sleek, responsive movie site inspired by Netflix, built with HTML,
-            and CSS.
-          </p>
-          <a
-            class="btn btn-primary"
-            href="https://davienjo.github.io/Webnet-Movies/"
-            target="_blank"
-            >View Project</a
-          >
+          <img src="images/webnet-movies-side.png" alt="Webnet Movies" />
+          <div class="overlay">
+            <h3>Webnet Movies</h3>
+            <p>Netflix-inspired movie site</p>
+            <a href="https://davienjo.github.io/Webnet-Movies/" target="_blank"
+              >View Project</a
+            >
+          </div>
         </div>
+      </div>
+
+      <!-- Hidden Projects-->
+      <div class="more-projects">
         <div class="project-card">
-          <img
-            class="project-image"
-            src="images/smart-barber-landscape.png"
-            alt="project 3"
-          />
-          <h3>Project Three</h3>
-          <p>
-            A stylish, mobile-friendly barbershop website built with HTML, and
-            CSS.
-          </p>
-          <a
-            class="btn btn-primary"
-            href=" https://davienjo.github.io/smart-barber-2/"
-            >View Project</a
-          >
+          <img src="images/smart-barber-landscape.png" alt="Smart Barber" />
+          <div class="overlay">
+            <h3>Smart Barber</h3>
+            <p>Modern barbershop website</p>
+            <a href="https://davienjo.github.io/smart-barber-2/" target="_blank"
+              >View Project</a
+            >
+          </div>
         </div>
+
         <div class="project-card">
           <img
-            class="project-image"
             src="images/explore-the -world-screen-shot-front.png"
-            alt="project 3"
+            alt="Explore the World"
           />
-          <h3>Project Four</h3>
-          <p>
-            A responsive travel website built with HTML and CSS, showcasing
-            destinations and adventures.
-          </p>
-          <a
-            class="btn btn-primary"
-            href="https://davienjo.github.io/Explore-the-world/"
-            target="_blank"
-            >View Project</a
-          >
+          <div class="overlay">
+            <h3>Explore the World</h3>
+            <p>Travel and adventure site</p>
+            <a
+              href="https://davienjo.github.io/Explore-the-world/"
+              target="_blank"
+              >View Project</a
+            >
+          </div>
         </div>
+
         <div class="project-card">
           <img
-            class="project-image"
             src="images/Quantum-tech-university-side.png"
-            alt="project 3"
+            alt="Quantum University"
           />
-          <h3>Project Five</h3>
-          <p>
-            A responsive university website built with HTML and CSS, featuring
-            key campus information and programs
-          </p>
-          <a
-            class="btn btn-primary"
-            href="https://davienjo.github.io/University-Website/"
-            target="_blank"
-            >View Project</a
-          >
+          <div class="overlay">
+            <h3>Quantum Tech</h3>
+            <p>Responsive university website</p>
+            <a
+              href="https://davienjo.github.io/University-Website/"
+              target="_blank"
+              >View Project</a
+            >
+          </div>
         </div>
+
         <div class="project-card">
-          <img
-            class="project-image"
-            src="images/landing-page-right.png"
-            alt="project 3"
-          />
-          <h3>Project Six</h3>
-          <p>
-            A clean, responsive landing page built with HTML and CSS to
-            highlight a service and much more.
-          </p>
-          <a
-            class="btn btn-primary"
-            href="https://davienjo.github.io/Website-landing-page/"
-            target="_blank"
-            >View Project</a
-          >
+          <img src="images/landing-page-right.png" alt="Landing Page" />
+          <div class="overlay">
+            <h3>Landing Page</h3>
+            <p>Service showcase landing page</p>
+            <a
+              href="https://davienjo.github.io/Website-landing-page/"
+              target="_blank"
+              >View Project</a
+            >
+          </div>
         </div>
+      </div>
+
+      <div class="see-more">
+        <button class="see-more-btn">See More Projects ↓</button>
       </div>
     </section>
 
-
-<!-- CTA section -->
+    <!-- CTA section -->
 
     <section class="cta">
       <h2>Ready to learn more about my qualifications?</h2>
@@ -285,12 +258,9 @@
       <a class="btn btn-primary" href="#">Download CV</a>
     </section>
 
-
     <!-- CONTACT SECTION -->
     <section class="contact" id="contact">
-      
       <div class="contact-info">
-        
         <div class="contact-text">
           <h2>Contact me</h2>
           <h3>Let’s talk about your next projects</h3>
@@ -320,87 +290,106 @@
         </div>
       </div>
 
-      
-<div class="contact-form">
-  <form class="form" action="#" method="post">
-    <div class="first">
-      <label for="name">Your Name</label>
-      <input type="text" name="name" placeholder="Your Name" id="name" required>
+      <div class="contact-form">
+        <form class="form" action="#" method="post">
+          <div class="first">
+            <label for="name">Your Name</label>
+            <input
+              type="text"
+              name="name"
+              placeholder="Your Name"
+              id="name"
+              required
+            />
 
-      <label for="phone">Phone</label>
-      <input type="tel" name="phone" placeholder="Enter Phone Number" id="phone" required>
+            <label for="phone">Phone</label>
+            <input
+              type="tel"
+              name="phone"
+              placeholder="Enter Phone Number"
+              id="phone"
+              required
+            />
 
-      <label for="email">Email</label>
-      <input type="email" name="email" placeholder="Your Email" id="email" required>
-    </div>
+            <label for="email">Email</label>
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              id="email"
+              required
+            />
+          </div>
 
-    <div class="second">
-      <label for="budget-range">Budget Range (USD)</label>
-      <select name="budget-range" id="budget-range" required>
-        <option value="">Select Budget</option>
-        <option value="50">$50</option>
-        <option value="100">$100</option>
-        <option value="200">$200</option>
-        <option value="300">$300</option>
-      </select>
+          <div class="second">
+            <label for="budget-range">Budget Range (USD)</label>
+            <select name="budget-range" id="budget-range" required>
+              <option value="">Select Budget</option>
+              <option value="50">$50</option>
+              <option value="100">$100</option>
+              <option value="200">$200</option>
+              <option value="300">$300</option>
+            </select>
 
-      <label for="services">I'm interested in</label>
-      <select name="services" id="services" required>
-        <option value="">Select a Service</option>
-        <option value="web-design">Web Design</option>
-        <option value="web-development">Web Development</option>
-        <option value="automation">Automation</option>
-        <option value="ui-design">UI Design</option>
-        <option value="branding">Branding</option>
-        <option value="content-guidance">Content Guidance</option>
-      </select>
+            <label for="services">I'm interested in</label>
+            <select name="services" id="services" required>
+              <option value="">Select a Service</option>
+              <option value="web-design">Web Design</option>
+              <option value="web-development">Web Development</option>
+              <option value="automation">Automation</option>
+              <option value="ui-design">UI Design</option>
+              <option value="branding">Branding</option>
+              <option value="content-guidance">Content Guidance</option>
+            </select>
 
-      <label for="country">Country</label>
-      <select name="country" id="country" required>
-        <option value="">Select Country</option>
-        <!-- Add actual country options here -->
-      </select>
-    </div>
+            <label for="country">Country</label>
+            <select name="country" id="country" required>
+              <option value="">Select Country</option>
+              <!-- Add actual country options here -->
+            </select>
+          </div>
 
-    <div class="message-section">
-      <label for="text-area">Your Message</label>
-      <textarea id="text-area" name="message" rows="5" placeholder="Your Message" required></textarea>
-    </div>
-   <a class="btn btn-primary" href="#">Send Message</a>
-</div>
-    
-  </form>
-</div>
-</section>
-
+          <div class="message-section">
+            <label for="text-area">Your Message</label>
+            <textarea
+              id="text-area"
+              name="message"
+              rows="5"
+              placeholder="Your Message"
+              required
+            ></textarea>
+          </div>
+          <a class="btn btn-primary" href="#">Send Message</a>
+        </form>
+      </div>
+    </section>
 
     <!-- FOOTER SECTION -->
 
     <section class="footer">
       <div class="footer-grid">
-
         <div class="footer-section">
           <h3>About Me</h3>
           <p>
             I'm David Thairu, a passionate Frontend Web Developer and Web
             Designer dedicated to crafting beautiful and functional websites.
           </p>
-  <!-- social media links -->
-      <div class="social-links">
-        <a href="https://www.facebook.com/davidthairu"
-          ><img src="images/logo-facebook.svg" alt="facebook"
-        /></a>
-        <a href="https://www.twitter.com/davidthairu"
-          ><img src="images/logo-twitter.svg" alt="twitter"
-        /></a>
-        <a href="https://www.linkedin.com/in/davidthairu"
-          ><img src="images/logo-linkedin.svg" alt="linkedin"
-        /></a>
-        <a href="https://www.instagram.com/davidthairu"
-          ><img src="images/logo-instagram.svg" alt="instagram"
-        /></a>
-      </div>
-     </div>
+          <!-- social media links -->
+          <div class="social-links">
+            <a href="https://www.facebook.com/davidthairu"
+              ><img src="images/logo-facebook.svg" alt="facebook"
+            /></a>
+            <a href="https://www.twitter.com/davidthairu"
+              ><img src="images/logo-twitter.svg" alt="twitter"
+            /></a>
+            <a href="https://www.linkedin.com/in/davidthairu"
+              ><img src="images/logo-linkedin.svg" alt="linkedin"
+            /></a>
+            <a href="https://www.instagram.com/davidthairu"
+              ><img src="images/logo-instagram.svg" alt="instagram"
+            /></a>
+          </div>
+        </div>
 
         <div class="footer-section">
           <h3>Quick Links</h3>
@@ -418,18 +407,18 @@
           <p>Email: thaividz2@gmail.com</p>
         </div>
 
-<div class="footer-section">
-  <h3>Get the latest info</h3>
-  <input type="email" placeholder="Your Email" />
-  <a class="btn btn-primary" href="#">Subscribe</a>
-</div>
-</div>
-<div class="footer-bottom">
-<p>&copy; 2025 David. All rights reserved.</p>
-</div>
-</section>
+        <div class="footer-section">
+          <h3>Get the latest info</h3>
+          <input type="email" placeholder="Your Email" />
+          <a class="btn btn-primary" href="#">Subscribe</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 David. All rights reserved.</p>
+      </div>
+    </section>
 
-<script
+    <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
       integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
       crossorigin="anonymous"
@@ -447,5 +436,5 @@
 
     <!-- Your custom animation script -->
     <script src="app.js" defer></script>
-</body>
+  </body>
 </html>

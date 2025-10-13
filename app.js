@@ -1,13 +1,13 @@
-// 1️⃣ Register GSAP + ScrollTrigger
+// 1Register GSAP + ScrollTrigger
 gsap.registerPlugin(ScrollTrigger);
 
-// 2️⃣ Initialize Lenis
+// 2Initialize Lenis
 const lenis = new Lenis({
   smooth: true,
   lerp: 0.1,
 });
 
-// 3️⃣ Run Lenis each frame
+// 3 Run Lenis each frame
 function raf(time) {
   lenis.raf(time);
   ScrollTrigger.update(); // ensure GSAP syncs
@@ -15,7 +15,7 @@ function raf(time) {
 }
 requestAnimationFrame(raf);
 
-// 4️⃣ Sync Lenis with ScrollTrigger
+// 4 Sync Lenis with ScrollTrigger
 ScrollTrigger.scrollerProxy(document.body, {
   scrollTop(value) {
     if (arguments.length) lenis.scrollTo(value);
@@ -28,7 +28,7 @@ ScrollTrigger.scrollerProxy(document.body, {
 
 
 // ==============================
-// 3️⃣ NAV MENU TOGGLE
+// 3 NAV MENU TOGGLE
 // ==============================
 const menuToggle = document.getElementById("menu-toggle");
 const navLinks = document.querySelector(".nav-links");
@@ -38,57 +38,41 @@ menuToggle.addEventListener("click", () => {
 });
 
 // ==============================
-// 4️⃣ DOM LOADED: ANIMATIONS
+// 4 DOM LOADED: ANIMATIONS
 // ==============================
 document.addEventListener("DOMContentLoaded", () => {
-  // HERO SECTION ANIMATION
-  const tl = gsap.timeline({ defaults: { ease: "linear", duration: 1 } });
-  tl.fromTo(".hero-img img", { y: -1000 }, { opacity: 1, y: 0, duration: 1.6 });
-  tl.fromTo(
-    ".hero-text-section",
-    { x: 1000, opacity: 0 },
-    { x: 0, opacity: 1, duration: 1.8 },
-    "-=1.2"
-  );
+  
+  
+  
+// HERO ANIMATION
+const tl = gsap.timeline({ defaults: { ease: "power3.out", duration: 2 } });
 
-  // HERO WAVE TEXT
-  const waveText = document.querySelector(".hero-h1");
-  if (waveText) {
-    const chars = waveText.textContent.split("");
-    waveText.textContent = "";
+tl.from(".hero-img img", { x: -100, opacity: 0 })
+  .from(".blob", { scale: 0, opacity: 0, duration: 0.8 }, "-=1")
+  .from(".hero-text h1", { x: 100, opacity: 0 }, "-=0.8")
+  .from(".hero-text h2", { x: 100, opacity: 0 }, "-=1")
+  .from(".hero-btn", { y: 50, opacity: 0 }, "-=1");
 
-    chars.forEach((char) => {
-      const span = document.createElement("span");
-      span.textContent = char;
-      waveText.appendChild(span);
-    });
-
-    gsap.to(".hero-h1 span", {
-      y: -30,
-      ease: "elastic.out(1, 0.5)",
-      duration: 1,
-      stagger: { each: 0.02, repeat: 5, yoyo: true },
-      color: "var(--light-color)",
-    });
-  }
 
   // ABOUT SECTION - SplitType ANIMATION
   const splitTypes = document.querySelectorAll(".reveal-line");
   splitTypes.forEach((element) => {
-    const text = new SplitType(element, { types: "words" });
-    gsap.from(text.words, {
+    const text = new SplitType(element, { types: "chars" });
+    gsap.from(text.chars, {
       scrollTrigger: {
         trigger: element,
         start: "top 80%",
         end: "top 20%",
-        scrub: false,
+        scrub: true,
         toggleActions: "play none none reverse",
       },
-      opacity: 0.2,
-      duration: 2.5,
-      // y:10,
+      // opacity: 0,
+      duration: 0.5,
+      transformOrigin:"top",
+      scaleY:0,
+      y:-20,
       stagger: 0.1,
-      ease: "power2.out",
+      // ease: "power2.out",
     });
   });
 
@@ -108,22 +92,50 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // PROJECTS
-  gsap.utils.toArray(".project-card").forEach((card, i) => {
-    gsap.from(card, {
-      scrollTrigger: {
-        trigger: card,
-        start: "top 80%",
-        end: "top 60%",
-        scrub: false,
-        toggleActions: "play none none none",
-      },
-      opacity: 0,
-      scale: 0.8,
-      duration: 2,
-      ease: "power2.out",
-      delay: i * 0.2,
-    });
+gsap.utils.toArray(".project-card").forEach((card, i) => {
+  gsap.from(card, {
+    scrollTrigger: {
+      trigger: card,
+      start: "top 90%",
+      end: "bottom 70%",
+      scrub: true,
+    },
+    y: 150,
+    opacity: 0,
+    scale: 0.9,
+    rotateX: -10,
+    transformOrigin: "center center",
+    ease: "power2.out",
   });
+});
+const btn = document.querySelector(".see-more-btn");
+const moreProjects = document.querySelector(".more-projects");
+let expanded = false;
+
+btn.addEventListener("click", () => {
+  if (!expanded) {
+    moreProjects.style.display = "flex";
+    gsap.to(moreProjects, {
+      opacity: 1,
+      y: 0,
+      duration: 1,
+      stagger: 0.2,
+      ease: "power2.out",
+    });
+    btn.textContent = "Show Less ↑";
+  } else {
+    gsap.to(moreProjects, {
+      opacity: 0,
+      y: 50,
+      duration: 0.8,
+      ease: "power1.in",
+      onComplete: () => (moreProjects.style.display = "none"),
+    });
+    btn.textContent = "See More Projects ↓";
+  }
+  expanded = !expanded;
+});
+
 
   // CONTACT FORM
   gsap.from(".contact form", {
@@ -140,8 +152,34 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+// fLOATING ORB
+gsap.to(".floating-orb", {
+    scrollTrigger: {
+      trigger: "body",
+      start: "top top",
+      end: "bottom bottom",
+      scrub: true,
+    },
+    x: () => window.innerWidth + 400,
+    y: 1000,
+    scale: 1.4,
+    opacity: 0.6,
+    ease: "none",
+  });
+
+  // Soft breathing glow animation
+  gsap.to(".floating-orb", {
+    scale: 1.5,
+    opacity: 0.9,
+    duration: 4,
+    repeat: -1,
+    yoyo: true,
+    ease: "sine.inOut",
+  });
+
+
 // ==============================
-// 5️⃣ REFRESH SCROLLTRIGGER AFTER LOAD
+// 5 REFRESH SCROLLTRIGGER AFTER LOAD
 // ==============================
 window.addEventListener("load", () => {
   ScrollTrigger.refresh();
