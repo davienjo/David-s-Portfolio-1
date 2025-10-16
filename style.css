@@ -194,8 +194,9 @@ nav {
 }
 
 .hero-image img {
-  width: 320px;
-  height: 320px;
+  max-width:400px;
+  width: 100%;
+  height: auto;
   object-fit: cover;
   border-radius: 50%;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
@@ -420,6 +421,7 @@ nav {
   align-items: center;
 }
 
+
 .about h2 {
   font-size: 2rem;
   margin-bottom: 2rem;
@@ -435,7 +437,7 @@ nav {
 .about-text {
   line-height: 1.5;
   overflow: auto;
-  /* align-self: flex-start; */
+  flex:1;
 }
 
 .reveal-line {
@@ -444,6 +446,11 @@ nav {
   margin-bottom: 1rem;
   transition: all 1s ease;
 }
+
+.about-image{
+  flex:1;
+}
+
 
 .about-image img {
   max-width: 350px;

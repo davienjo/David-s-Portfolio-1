@@ -114,13 +114,10 @@
   }
 
   .hero-image {
-    max-width: 200px;
+    max-width: 250px;
   }
 
-  .hero-image img {
-    width: 100%;
-    height: auto;
-  }
+  
 
   /* SERVICES SECTION */
   .services-container {
@@ -137,8 +134,8 @@
   }
 
   .about-image img {
-    max-width: 200px;
-    width: 100%;
+    max-width: 250px;
+    
   }
 
   .about-text {
@@ -269,11 +266,7 @@
     max-width: 100%;
   }
 
-  .about-image img {
-    max-width: 200px;
-    width: 100%;
-  }
-
+ 
   /* CONTACT SECTION — MOBILE VERSION */
   .contact {
     gap: 1.5rem;
