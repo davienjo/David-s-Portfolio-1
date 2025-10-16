@@ -1,4 +1,5 @@
 // 1Register GSAP + ScrollTrigger
+document.addEventListener("DOMContentLoaded", () => {
 gsap.registerPlugin(ScrollTrigger);
 
 // 2Initialize Lenis
@@ -40,18 +41,18 @@ menuToggle.addEventListener("click", () => {
 // ==============================
 // 4 DOM LOADED: ANIMATIONS
 // ==============================
-document.addEventListener("DOMContentLoaded", () => {
+
   
   
   
 // HERO ANIMATION
 const tl = gsap.timeline({ defaults: { ease: "power3.out", duration: 2 } });
 
-tl.from(".hero-img img", { x: -100, opacity: 0 })
-  .from(".blob", { scale: 0, opacity: 0, duration: 0.8 }, "-=1")
-  .from(".hero-text h1", { x: 100, opacity: 0 }, "-=0.8")
-  .from(".hero-text h2", { x: 100, opacity: 0 }, "-=1")
-  .from(".hero-btn", { y: 50, opacity: 0 }, "-=1");
+tl.from(".hero-image", { x: -800, opacity: 0 })
+  .from(".blob", { scale: 0, opacity: 0 }, "-=1")
+  .from(".hero-text h1", { x: 500, opacity: 0 }, "-=0.8")
+  .from(".hero-text h2", { x: 500, opacity: 0 }, "-=1")
+  .from(".hero-buttons", { y: 50, opacity: 0 }, "-=1");
 
 
   // ABOUT SECTION - SplitType ANIMATION
@@ -64,15 +65,14 @@ tl.from(".hero-img img", { x: -100, opacity: 0 })
         start: "top 80%",
         end: "top 20%",
         scrub: true,
-        toggleActions: "play none none reverse",
+        
       },
-      // opacity: 0,
-      duration: 0.5,
+      
       transformOrigin:"top",
       scaleY:0,
       y:-20,
       stagger: 0.1,
-      // ease: "power2.out",
+      
     });
   });
 
@@ -97,17 +97,19 @@ gsap.utils.toArray(".project-card").forEach((card, i) => {
     scrollTrigger: {
       trigger: card,
       start: "top 90%",
-      end: "bottom 70%",
-      scrub: true,
+      end: "top 50%",
+      toggleActions:"play none none reverse",
+      // markers:true,
     },
     y: 150,
     opacity: 0,
-    scale: 0.9,
-    rotateX: -10,
-    transformOrigin: "center center",
+    scale: 0.8,
+    // rotateX: -10,
+    transformOrigin: "center",
     ease: "power2.out",
   });
 });
+
 const btn = document.querySelector(".see-more-btn");
 const moreProjects = document.querySelector(".more-projects");
 let expanded = false;
@@ -136,46 +138,53 @@ btn.addEventListener("click", () => {
   expanded = !expanded;
 });
 
+// CTA SECTION
+
+gsap.from(".cta", {
+  scrollTrigger:{
+    trigger:".cta",
+    start:"top 90%",
+    end:"top 60%",
+    scrub:1,
+    toggleActions:"play none none reverse",
+    // markers:true
+  },
+  opacity:0.2,
+  scale: 0.6,
+  });
+
+
 
   // CONTACT FORM
-  gsap.from(".contact form", {
-    scrollTrigger: {
-      trigger: ".contact form",
-      start: "top 80%",
-      end: "top 60%",
-      scrub: true,
-    },
+if (window.innerWidth > 768){
+
+const cont = gsap.timeline({
+  scrollTrigger:{
+    trigger:".contact",
+    start: "top 70%",
+    end: "top 40%",
+    scrub:5,
+    toggleActions: "play none none reverse",
+}
+ });
+
+  cont.from(".contact-info", {
+   opacity: 0,
+    xPercent: -50,
+    duration: 1.2,
+    ease: "power2.out",
+    })
+  .from(".form",{
     opacity: 0,
-    y: 80,
+    xPercent: 50,
     duration: 1.2,
     ease: "power2.out",
   });
-});
 
+  }
 // fLOATING ORB
-gsap.to(".floating-orb", {
-    scrollTrigger: {
-      trigger: "body",
-      start: "top top",
-      end: "bottom bottom",
-      scrub: true,
-    },
-    x: () => window.innerWidth + 400,
-    y: 1000,
-    scale: 1.4,
-    opacity: 0.6,
-    ease: "none",
-  });
 
-  // Soft breathing glow animation
-  gsap.to(".floating-orb", {
-    scale: 1.5,
-    opacity: 0.9,
-    duration: 4,
-    repeat: -1,
-    yoyo: true,
-    ease: "sine.inOut",
-  });
+
 
 
 // ==============================
@@ -184,3 +193,5 @@ gsap.to(".floating-orb", {
 window.addEventListener("load", () => {
   ScrollTrigger.refresh();
 });
+});
+

@@ -28,7 +28,7 @@ body {
   line-height: 1.5;
   font-weight: 400;
   padding-top: 3rem;
-  overflow-x: auto;
+  overflow-x: hidden;
 }
 
 nav {
@@ -475,7 +475,7 @@ nav {
 
 /* PROJECTS SECTION */
 .projects {
-  padding: 10rem 0;
+  padding: 5rem 0;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -617,7 +617,7 @@ nav {
   gap: 1rem;
   justify-content: center;
   align-items: center;
-  margin-block: 4rem;
+  margin-bottom: 10rem;
 }
 
 /* ====== CONTACT SECTION ====== */
