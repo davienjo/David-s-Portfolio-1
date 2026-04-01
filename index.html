@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="media-queries.css">
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/lenis@1.3.21/dist/lenis.css"
+    />
+    <title>David Portfolio</title>
+  </head>
+  <body>
+    <div class="hero-image"></div>
+
+    <!-- <div class="content-wrapper"> -->
+
+    <!-- HEADER SECTION -->
+    <header id="portfolio-header" class="is--nav">
+      <nav class="nav">
+        <ul>
+          <li><a href="#about-section">About</a></li>
+          <li><a href="#work-section">Projects</a></li>
+          <li><a href="#tag-section">services</a></li>
+        </ul>
+
+        <div class="nav-title" id="title">
+          <h1>I'm David</h1>
+        </div>
+
+        <div class="nav-contact">
+          <a href="#contact" class="btn">Contacts</a>
+        </div>
+      </nav>
+
+      <!-- hamburger menu -->
+      <div class="hamburger-menu" id="menu">
+      <div class="menu-bars">
+       <span></span>
+       <span></span>
+       <span></span>
+      </div>
+      </div>
+
+    </header>
+
+    <!-- MAIN SECTION -->
+
+    <main id="main">
+      <section class="discover" id="discover">
+        <div class="container">
+          <div class="slide">
+            <h1 class="slide1">I Build fast,</h1>
+          </div>
+
+          <div class="slide">
+            <h1 class="slide2 italic">Responsive,</h1>
+          </div>
+
+          <div class="slide">
+            <h1 class="slide3">and Beautiful</h1>
+          </div>
+
+          <div class="slide">
+            <h1 class="slide4">Web Experiences</h1>
+          </div>
+        </div>
+      </section>
+
+      <!-- IMAGE SECTION -->
+      <section class="image-section" id="image-section">
+        <div class="container">
+          <div class="cover">
+            <img
+              src="images/developer-workspace.webp"
+              alt="clip-path image"
+              id="clip-path"
+            />
+
+            <div class="image-text">
+              <h2>Crafting Digital Experiences</h2>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- tag section -->
+
+      <section class="tag-section" id="tag-section">
+        <h2 class="tag-h2">What I Offer</h2>
+
+        <div class="container2">
+          <span>Web Development</span>
+          <span>Web Design</span>
+          <span>SEO Optimization</span>
+          <span>API Integration</span>
+          <span>Website Maintenance</span>
+          <span>Front-End Development</span>
+          <span>Creative Coder</span>
+          <span>UI Enthusiast</span>
+          <span>Animation & Interactivity</span>
+          <span>User Interface Design</span>
+          <span>Branding</span>
+          <span>Content Guidance</span>
+        </div>
+      </section>
+
+      <!-- Projects section -->
+      <section class="work-section" id="work-section">
+        <div class="work-title">
+          <h2 class="heading-title">Featured Work</h2>
+        </div>
+        <div class="horizontal-scroll-wrapper">
+          <div class="horizontal">
+            <div class="panel">
+              <img
+                src="images/E-commerce showcase with BeePlus platform.webp"
+                alt=""
+              />
+            </div>
+            <div class="panel">
+              <img
+                src="images/Gate One Medical Waste Solutions website.webp"
+                alt=""
+              />
+            </div>
+            <div class="panel">
+              <img src="images/smart-barber-landscape.png" alt="" />
+            </div>
+            <div class="panel">
+              <img src="images/tasty-bites-left.png" alt="tasty-bites restaurant website preview" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About section -->
+      <section id="about-section" class="about-section">
+        <div class="container">
+          <div class="about-content">
+            <h2 class="about-title text">About Me</h2>
+
+            <p class="text">
+              I’m a frontend developer who enjoys bringing interfaces to life
+              through clean code and
+            </p>
+            <p class="text">
+              smooth interactions. I work with HTML, CSS, JavaScript, and GSAP
+              to build responsive,
+            </p>
+            <p class="text">
+              visually engaging websites that feel as good as they look.
+            </p>
+            <p class="text">
+              I focus on the details—layout, motion, and user experience—because
+              I believe great
+            </p>
+            <p class="text">
+              design is not just seen, but felt. Whether it’s subtle animations
+              or full interactive
+            </p>
+            <p class="text">
+              sections, I aim to create experiences that stand out.
+            </p>
+            <p class="text">
+              Currently, I’m sharpening my skills and building projects that
+              combine performance
+            </p>
+            <p class="text">with creativity.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- End of about section -->
+    </main>
+
+    <!-- </div> -->
+
+    <!-- CTA section -->
+
+    <section class="cta">
+      <h2>Ready to learn more about my qualifications?</h2>
+      <p>
+        Feel free to reach out for a detailed discussion on how I can contribute
+        to your projects.
+      </p>
+      <a class="btn" href="cv.pdf" download>Download CV</a>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact" id="contact">
+      <div class="contact-info">
+        <div class="contact-text">
+          <h2>Contact me</h2>
+          <h3>Let’s talk about your next projects</h3>
+          <p>
+            If you're interested in working together or have any <br />
+            questions, feel free to reach out!
+          </p>
+        </div>
+
+        <div class="center">
+          <img src="images/call-outline.svg" alt="Phone" class="contact-icon" />
+          <p>+254720062553</p>
+        </div>
+
+        <div class="center">
+          <img src="images/mail-outline.svg" alt="Email" class="contact-icon" />
+          <p>thaividz2@gmail.com</p>
+        </div>
+
+        <div class="center">
+          <img
+            src="images/location-outline.svg"
+            alt="Location"
+            class="contact-icon"
+          />
+          <p>Nairobi, Kenya</p>
+        </div>
+      </div>
+
+      <div class="contact-form">
+        <form class="form" action="#" method="post">
+          <div class="first">
+            <label for="name">Your Name</label>
+            <input
+              type="text"
+              name="name"
+              placeholder="Your Name"
+              id="name"
+              required
+            />
+
+            <label for="phone">Phone</label>
+            <input
+              type="tel"
+              name="phone"
+              placeholder="Enter Phone Number"
+              id="phone"
+              required
+            />
+
+            <label for="email">Email</label>
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              id="email"
+              required
+            />
+          </div>
+
+          <div class="second">
+            <label for="budget-range">Budget Range (USD)</label>
+            <select name="budget-range" id="budget-range" required>
+              <option value="">Select Budget</option>
+              <option value="50">$50</option>
+              <option value="100">$100</option>
+              <option value="200">$200</option>
+              <option value="300">$300</option>
+            </select>
+
+            <label for="services">I'm interested in</label>
+            <select name="services" id="services" required>
+              <option value="">Select a Service</option>
+              <option value="web-design">Web Design</option>
+              <option value="web-development">Web Development</option>
+              <option value="automation">Automation</option>
+              <option value="ui-design">UI Design</option>
+              <option value="branding">Branding</option>
+              <option value="content-guidance">Content Guidance</option>
+            </select>
+
+            <label for="country">Country</label>
+            <select name="country" id="country" required>
+              <option value="">Select Country</option>
+              <!-- Add actual country options here -->
+            </select>
+          </div>
+
+          <div class="message-section">
+            <label for="text-area">Your Message</label>
+            <textarea
+              id="text-area"
+              name="message"
+              rows="5"
+              placeholder="Your Message"
+              required
+            ></textarea>
+          </div>
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- FOOTER SECTION -->
+
+    <section class="footer">
+      <div class="footer-grid">
+        <div class="footer-section">
+          <h3>About Me</h3>
+          <p>
+            I'm David Thairu, a passionate Frontend Web Developer and Web
+            Designer dedicated to crafting beautiful and functional websites.
+          </p>
+          <!-- social media links -->
+          <div class="social-links">
+            <a href="https://www.facebook.com/davidthairu"
+              ><img src="images/logo-facebook.svg" alt="facebook"
+            /></a>
+
+            <a href="https://www.linkedin.com/in/davidthairu"
+              ><img src="images/logo-linkedin.svg" alt="linkedin"
+            /></a>
+            <a href="https://www.instagram.com/davidthairu"
+              ><img src="images/logo-instagram.svg" alt="instagram"
+            /></a>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="#portfolio-header">Home</a></li>
+            <li><a href="#about-section">About</a></li>
+            <li><a href="#work-section">Projects</a></li>
+            <li><a href="#tag-section">services</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Contact Info</h3>
+          <p>Phone: +254720062553</p>
+          <p>Email: thaividz2@gmail.com</p>
+        </div>
+
+        <div class="footer-section">
+          <h3>Get the latest info</h3>
+          <input type="email" placeholder="Your Email" />
+          <a class="btn" href="#">Subscribe</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 David. All rights reserved.</p>
+      </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/ScrollTrigger.min.js"></script>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/ScrollToPlugin.min.js"></script> -->
+
+    <script src="https://unpkg.com/lenis@1.3.21/dist/lenis.min.js"></script>
+
+    <script src="app.js"></script>
+  </body>
+</html>
