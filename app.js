@@ -16,10 +16,14 @@ requestAnimationFrame(raf);
 // humburger menu
 
 const menu = document.getElementById("menu");
-const nav = document.querySelector(".nav");
+const mobileMenu = document.getElementById("mobile-menu");
 
 menu.addEventListener("click", () => {
-  nav.classList.toggle("active");
+  mobileMenu.classList.toggle("active");
+});
+
+window.addEventListener("scroll", () => {
+  mobileMenu.classList.remove("active");
 });
 
 gsap.fromTo(
