@@ -413,6 +413,19 @@ a {
   width: 100%;
   background: var(--gray-color);
   margin-top: 1.5rem;
+  display:inline-text;
+  gap:2rem;
+  white-space: nowrap;
+}
+
+.motion-text {
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
 }
 
 .motion-track {
