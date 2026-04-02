@@ -98,22 +98,6 @@ tl.fromTo(
   0.1,
 );
 
-// projects section
-// const projects = document.querySelector(".horizontal");
-
-// gsap.to(projects, {
-//   x: () => projects.scrollWidth * -1,
-//   // xPercent :100,
-//   scrollTrigger: {
-//   trigger: projects,
-//   start: "top top",
-//   end: "+=1000px",
-//   scrub:  2,
-//   pin: true,
-//   invalidateOnRefresh:true
-
-// }
-// })
 
 if (window.innerWidth > 768) {
   const projects = document.querySelector(".horizontal");
