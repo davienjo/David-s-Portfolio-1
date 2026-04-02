@@ -407,6 +407,42 @@ a {
   align-items: center;
 }
 
+/* MOTION TEXT */
+.motion-text {
+  overflow: hidden;
+  width: 100%;
+  background: var(--gray-color);
+  margin-top: 1.5rem;
+}
+
+.motion-track {
+  display: inline-flex;
+  gap: 2rem; 
+  animation: scrollText 30s linear infinite;
+}
+
+/* Pause animation on hover */
+.motion-text:hover .motion-track {
+  animation-play-state: paused;
+}
+
+.motion-track span {
+  flex: 0 0 auto;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+/* Animation for infinite scroll */
+@keyframes scrollText {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
 /* ====== CONTACT SECTION ====== */
 .contact {
   display: grid;
