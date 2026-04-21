@@ -4,7 +4,7 @@
 ## 📸 Preview
 
 <p align="center">
-  <img src="./images/hero-img.webp" width="700" />
+  <img src="./images/hero-img.webp" width="300" height= "500" />
 </p>
 
 
