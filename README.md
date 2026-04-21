@@ -3,7 +3,9 @@
 
 ## 📸 Preview
 
-![Portfolio Preview](./images/hero-img.webp)
+<p align="center">
+  <img src="./images/hero-img.webp" width="700" />
+</p>
 
 
 ## 📈 What I Learned
