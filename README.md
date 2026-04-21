@@ -1,39 +1,44 @@
 
----
-
-## 📸 Preview
+# 📸 Preview
+------------------------------------------------------------
 
 <p align="center">
-  <img src="./images/hero-img.webp" width="300" height= "500" />
+  <img src="./images/hero-img.webp" width="300" height="500" />
 </p>
 
+---
 
-## 📈 What I Learned
+# 📈 What I Learned
+------------------------------------------------------------
 
 While building this project, I improved my skills in:
-- Responsive design principles
-- Animation with GSAP
-- Performance optimization (image formats like WebP)
-- UI/UX structuring and layout planning
+
+- Responsive design principles  
+- Animation with GSAP  
+- Performance optimization (image formats like WebP)  
+- UI/UX structuring and layout planning  
 
 ---
 
-## 🔗 Connect With Me
+# 🔗 Connect With Me
+------------------------------------------------------------
 
-- 💻 GitHub: https://github.com/davienjo
-- 📧 Email: thaividz2@gmail.com  
-
----
-
-## 📌 Future Improvements
-
-- Add backend (PHP / Node.js) for contact form
-- Improve accessibility (ARIA roles, better semantics)
-- Add dark/light mode toggle
-- More advanced animations and transitions
+💻 GitHub: https://github.com/davienjo  
+📧 Email: thaividz2@gmail.com  
 
 ---
 
-## ⭐️ Show Your Support
+# 📌 Future Improvements
+------------------------------------------------------------
+
+- Add backend (PHP / Node.js) for contact form  
+- Improve accessibility (ARIA roles, better semantics)  
+- Add dark/light mode toggle  
+- More advanced animations and transitions  
+
+---
+
+# ⭐️ Show Your Support
+------------------------------------------------------------
 
 If you like this project, feel free to ⭐️ the repo and connect with me!
