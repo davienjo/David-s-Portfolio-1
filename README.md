@@ -1,6 +1,35 @@
+# 🌐 Personal Portfolio Website
 
-# 📸 Preview
-------------------------------------------------------------
+A modern, responsive portfolio website built to showcase my frontend development skills, UI design capabilities, and selected projects.
+
+---
+
+## 🚀 Live Demo
+👉 https://davienjo.github.io/David-s-Portfolio-1/
+
+---
+
+## 🛠️ Tech Stack
+- HTML5  
+- CSS3  
+- JavaScript  
+- GSAP (Animations)  
+- Responsive Web Design  
+- WebP Optimization  
+
+---
+
+## ✨ Features
+- Fully responsive design across all devices  
+- Smooth animations using GSAP  
+- Modern UI/UX layout structure  
+- Optimized images for performance  
+- Clean and minimal interface  
+- Section-based navigation flow  
+
+---
+
+## 📸 Preview
 
 <p align="center">
   <img src="./images/hero-img.webp" width="300" height="500" />
@@ -8,37 +37,36 @@
 
 ---
 
-# 📈 What I Learned
-------------------------------------------------------------
+## 🎯 Project Purpose
+This project was built to strengthen my frontend development skills, with a focus on UI structuring, responsive design, and animation implementation using GSAP.
 
-While building this project, I improved my skills in:
-
-- Responsive design principles  
-- Animation with GSAP  
-- Performance optimization (image formats like WebP)  
-- UI/UX structuring and layout planning  
+It also serves as a central hub for showcasing my development work and technical growth.
 
 ---
 
-# 🔗 Connect With Me
-------------------------------------------------------------
-
-💻 GitHub: https://github.com/davienjo  
-📧 Email: thaividz2@gmail.com  
+## 📈 What I Learned
+- Advanced responsive design techniques  
+- GSAP animation workflows  
+- UI/UX layout planning and structure  
+- Performance optimization using modern image formats (WebP)  
+- Building production-style frontend interfaces  
 
 ---
 
-# 📌 Future Improvements
-------------------------------------------------------------
-
-- Add backend (PHP / Node.js) for contact form  
-- Improve accessibility (ARIA roles, better semantics)  
+## 🔮 Future Improvements
+- Add backend integration for contact form (Node.js / PHP)  
+- Improve accessibility (ARIA roles, semantic HTML)  
 - Add dark/light mode toggle  
-- More advanced animations and transitions  
+- Expand animation interactions  
+- Add blog or case study section  
 
 ---
 
-# ⭐️ Show Your Support
-------------------------------------------------------------
+## 🔗 Connect With Me
+- GitHub: https://github.com/davienjo  
+- Email: thaividz2@gmail.com  
+- Portfolio: https:https://davienjo.github.io/David-s-Portfolio-1/
 
-If you like this project, feel free to ⭐️ the repo and connect with me!
+---
+
+⭐ If you like this project, feel free to star the repo and connect!
